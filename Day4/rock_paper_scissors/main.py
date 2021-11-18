@@ -2,7 +2,7 @@ import random
 import options
 
 your_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-computer_choice = random.randint(0, 2)
+computer_choice = random.randint(0, 3)
 options.choose(your_choice)
 print(f"Computer chose:")
 options.choose(computer_choice)

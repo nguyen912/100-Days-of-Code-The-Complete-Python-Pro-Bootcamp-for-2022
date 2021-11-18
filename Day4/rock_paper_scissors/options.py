@@ -26,5 +26,3 @@ def choose (choice):
               (____)
         ---.__(___)
         ''')
-    else:
-        print("Error!")
