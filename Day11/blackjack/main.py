@@ -1,18 +1,15 @@
 from random import choice
 
-cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 10, 10, 10,
-         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 10, 10, 10,
-         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 10, 10, 10,
-         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 10, 10, 10]
+cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 10, 10, 10]
 
 
 def hit_card():
     card = choice(cards)
-    if card == 1 or card == 11:
-        cards.remove(1)
-        cards.remove(11)
-    else:
-        cards.remove(card)
+    # if card == 1 or card == 11:
+    #     cards.remove(1)
+    #     cards.remove(11)
+    # else:
+    cards.remove(card)
     return card
 
 
