@@ -1,9 +1,8 @@
 from random import choice
-
-cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 10, 10, 10]
-
+from art import logo
 
 def hit_card():
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     card = choice(cards)
     # if card == 1 or card == 11:
     #     cards.remove(1)
@@ -61,4 +60,5 @@ def play_blackjack():
         print(f"You {check_result(sum(computer_cards), sum(player_cards))}")
 
 
+print(logo)
 play_blackjack()
