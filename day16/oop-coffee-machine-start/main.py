@@ -3,16 +3,21 @@ from classes.coffee_maker import CoffeeMaker
 from classes.money_machine import MoneyMachine
 
 
-def order_drink():
-    menu = Menu()
+menu = Menu()
+coffee_maker = CoffeeMaker()
+money_machine = MoneyMachine()
+is_on = True
 
-    drink = input(f'What would you like? ({menu.get_items()}): ')
-    if menu.find_drink(drink) is not None:
-        print(f'{drink} is being dispensed')
+
+while is_on:
+    options = menu.get_items()
+    choice = input(f'What would you like? ({options})')
+    if choice == 'off':
+        is_on = False
+    elif choice == 'report':
+        coffee_maker.report()
+        money_machine.report()
     else:
-        order_drink()
-
-
-if __name__ == '__main__':
-    order_drink()
-
+        drink = menu.find_drink(choice)
+        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+            coffee_maker.make_coffee(drink)
