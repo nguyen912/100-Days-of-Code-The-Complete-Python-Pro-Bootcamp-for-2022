@@ -27,5 +27,13 @@ if __name__ == '__main__':
         timmy_the_turtle.forward(100)
         timmy_the_turtle.left(90)
 
-    #
+    # draw dashed line
+    dashed_line = t.Turtle()
+    for _ in range(10):
+        dashed_line.forward(10)
+        dashed_line.penup()
+        dashed_line.forward(10)
+        dashed_line.pendown()
+
+
 
