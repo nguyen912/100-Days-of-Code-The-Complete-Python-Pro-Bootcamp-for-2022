@@ -6,12 +6,13 @@ screen.setup(width=1.0, height=1.0)
 screen.colormode(255)
 
 shape = t.Turtle()
+shape.pensize(2)
 
 
 def random_color():
-    r = random.randint(0, 256)
-    g = random.randint(0, 256)
-    b = random.randint(0, 256)
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
     color = (r, g, b)
     return color
 
