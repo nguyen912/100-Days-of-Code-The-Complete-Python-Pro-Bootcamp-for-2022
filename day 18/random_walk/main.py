@@ -1,6 +1,8 @@
 import random
 import turtle
 
+turtle.colormode(255)
+
 walk = turtle.Turtle()
 walk.pensize(5)
 # E, N, W, S
@@ -10,7 +12,6 @@ directions = (0, 90, 180, 270)
 def setup_screen():
     screen = turtle.Screen()
     screen.setup(width=1.0, height=1.0)
-    screen.colormode(255)
     return screen
 
 

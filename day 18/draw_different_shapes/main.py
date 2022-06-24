@@ -1,9 +1,10 @@
 import turtle as t
 import random
+
+t.colormode(255)
 # # draw different shapes
 screen = t.Screen()
 screen.setup(width=1.0, height=1.0)
-screen.colormode(255)
 
 shape = t.Turtle()
 shape.pensize(2)
