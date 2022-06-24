@@ -2,7 +2,7 @@ import random
 import turtle
 
 walk = turtle.Turtle()
-walk.pensize(10)
+walk.pensize(5)
 # E, N, W, S
 directions = (0, 90, 180, 270)
 
@@ -26,6 +26,7 @@ if __name__ == '__main__':
     screen = setup_screen()
     for i in range(200):
         walk.color(random_color())
+        walk.speed(random.randrange(0, 20, 1)*1/2)
         walk.forward(30)
         walk.setheading(random.choice(directions))
 
